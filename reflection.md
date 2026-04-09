@@ -25,7 +25,7 @@ Frontend + Auth/Data integration engineer cho BKAgent. Mình phụ trách luồn
 - Cập nhật thêm phần UX cá nhân Day 5 (analysis + sketch) để hoàn thiện mốc cá nhân.
 
 ## 5. 1 điều học được trong hackathon mà trước đó chưa biết
-Mình học được rằng với AI product, “đăng nhập chạy được” chưa đủ; quan trọng hơn là thiết kế trust path khi dữ liệu và model có thể sai. Chỉ cần auth/data mapping lệch nhẹ cũng làm đứt toàn bộ flow tư vấn kế hoạch học tập.
+Điều mình học rõ nhất là: trong AI product, chất lượng trải nghiệm phụ thuộc mạnh vào “độ nhất quán dữ liệu” chứ không chỉ vào model hay UI. Trước đây mình nghĩ login chỉ là bước vào hệ thống, nhưng khi làm thực tế mới thấy nếu contract giữa auth và student data không chặt (ID, schema, session), thì các chức năng phía sau như gợi ý kế hoạch, kiểm tra điều kiện môn, hiển thị hồ sơ đều sai dây chuyền. Bài học này làm mình thay đổi tư duy từ “làm từng màn hình” sang “thiết kế luồng end-to-end có kiểm chứng dữ liệu ở mỗi điểm nối”.
 
 ## 6. Nếu làm lại, đổi gì? (cụ thể)
 - Mình sẽ chốt auth contract và schema student data sớm hơn ngay từ đầu (ID format, field bắt buộc, session key), sau đó mới build UI để tránh refactor nhiều vòng.
